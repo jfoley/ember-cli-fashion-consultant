@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-fashion-consultant",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "An ember CLI addon for fashion consultant.",
   "directories": {
     "doc": "doc",
@@ -11,11 +11,11 @@
     "build": "ember build",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": "https://github.com/jfoley/ember-cli-fashion-consultant",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "John Foley",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
@@ -38,6 +38,7 @@
     "ember-addon"
   ],
   "dependencies": {
+    "broccoli-funnel": "^0.2.3",
     "ember-cli-babel": "^5.0.0",
     "fashion-consultant": "0.0.1"
   },
