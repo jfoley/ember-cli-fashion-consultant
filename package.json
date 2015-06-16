@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-fashion-consultant",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "An ember CLI addon for fashion consultant.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -38,7 +38,8 @@
     "ember-addon"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.0.0"
+    "ember-cli-babel": "^5.0.0",
+    "fashion-consultant": "0.0.1"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

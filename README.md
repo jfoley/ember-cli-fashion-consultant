@@ -1,6 +1,6 @@
 # Ember-cli-fashion-consultant
 
-This README outlines the details of collaborating on this Ember addon.
+An ember addon that integrates fashion consultant.
 
 ## Installation
 
