@@ -1,6 +1,7 @@
 /* jshint node: true */
 'use strict';
 
+var Path = require('path');
 var Funnel = require('broccoli-funnel');
 var FashionConsultant = require('fashion-consultant');
 
@@ -16,8 +17,10 @@ module.exports = {
       exclude: ['**/vendor.css']
     });
 
+    var docAssetsPath = Path.join(process.cwd(), 'doc-assets');
     var consultant = new FashionConsultant({
       inputPaths: srcCss,
+      docAssetsPath: docAssetsPath
     });
 
     return consultant.rebuild();
