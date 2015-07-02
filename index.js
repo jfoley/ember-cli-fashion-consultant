@@ -13,13 +13,9 @@ module.exports = {
       return inputTree;
     }
 
-    var srcCss = Funnel(inputTree, {
-      exclude: ['**/vendor.css']
-    });
-
     var docAssetsPath = Path.join(process.cwd(), 'doc-assets');
     var consultant = new FashionConsultant({
-      inputPaths: srcCss,
+      inputPaths: inputTree,
       docAssetsPath: docAssetsPath
     });
 
