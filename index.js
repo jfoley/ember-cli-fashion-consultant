@@ -4,6 +4,7 @@
 var Path = require('path');
 var Funnel = require('broccoli-funnel');
 var FashionConsultant = require('fashion-consultant');
+var MergeTrees = require('broccoli-merge-trees');
 
 module.exports = {
   name: 'ember-cli-fashion-consultant',
@@ -13,12 +14,16 @@ module.exports = {
       return inputTree;
     }
 
+    var srcCss = Funnel(inputTree, {
+      include: ['**/' + this.app.name + '.css']
+    });
+
     var docAssetsPath = Path.join(process.cwd(), 'doc-assets');
     var consultant = new FashionConsultant({
-      inputPaths: inputTree,
+      inputPaths: srcCss,
       docAssetsPath: docAssetsPath
     });
 
-    return consultant.rebuild();
+    return MergeTrees([inputTree, consultant.rebuild()], {overwrite: true});
   }
 };
